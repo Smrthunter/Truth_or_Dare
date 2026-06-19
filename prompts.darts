@@ -1,0 +1,42 @@
+import 'dart:math';
+
+final List<String> truths = [
+  "What's your most embarrassing nickname?",
+  "What's the last lie you told?",
+  "What's your weirdest habit?",
+  "Who was your first crush?",
+  "What's your biggest fear?",
+  "What's your guilty pleasure?",
+  "What's the strangest dream you've had?",
+  "What's your most useless talent?",
+  "What's the worst gift you've received?",
+  "What's something you've never told anyone?",
+  "What's your most awkward moment?",
+  "What's the funniest thing you've done by accident?",
+  "What's a food you secretly dislike?",
+  "What's your biggest pet peeve?",
+  "If you could be invisible, what would you do?",
+];
+
+final List<String> dares = [
+  "Do your best chicken dance.",
+  "Talk like a robot for 10 seconds.",
+  "Sing the alphabet dramatically.",
+  "Pretend to be a cat for 15 seconds.",
+  "Do 10 jumping jacks.",
+  "Dance without music for 15 seconds.",
+  "Speak in slow motion for 20 seconds.",
+  "Compliment everyone in the room.",
+  "Act like a monkey for 10 seconds.",
+  "Balance on one foot for 15 seconds.",
+  "Do your best evil laugh.",
+  "Pretend you're a news reporter.",
+  "Make your funniest face.",
+  "Talk in a fake accent.",
+  "Do a superhero pose and hold it.",
+];
+
+String getPrompt(String type) {
+  final list = type == "Truth" ? truths : dares;
+  return list[Random().nextInt(list.length)];
+}
